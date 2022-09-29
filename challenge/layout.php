@@ -113,7 +113,9 @@ set_error_handler(function ($e_code, $text, $file, $line) use ($player, $game) {
                 <div class="py-3 text-center">
                     <h5><b>Task:</b> descoperă codul QR și scanează-l cu telefonul ;)</h5>
                 </div>
-            <?php }
+                <?php
+                break;
+            }
             case 'f': { ?>
                 <div  class="row">
                     <div class="col">
@@ -128,7 +130,9 @@ set_error_handler(function ($e_code, $text, $file, $line) use ($player, $game) {
                         <img src="/assets/1.6/correct-recipe.jpeg" class="w-50" />
                     </div>
                 </div>
-            <?php }
+                <?php
+                break;
+            }
         } ?>
 
         <div class="row py-3 align-items-center justify-content-center text-center">
