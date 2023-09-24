@@ -1,0 +1,6 @@
+.vscode/*
+!.vscode/sftp.json.live.example
+
+.gitmodules
+.ftpquota
+error_log

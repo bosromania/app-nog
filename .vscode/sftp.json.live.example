@@ -3,8 +3,9 @@
     "host":         "nog.bosromania.ro",
     "protocol":     "ftp",
     "port":         21,
-    "username":     "nog@nog.bosromania.ro",
-    "password":     "oZx,Z?].xs0%",
+    "username":     "{{user.dev.name}}@nog.bosromania.ro",
+    "password":     "{{user.dev.pass}}",
+    "context":      "challenge/errors",
     "remotePath":   "/",
     "ignore":       [
         ".vscode/", ".git/", ".well-known/", "cgi-bin/", ".ftpquota", ".gitignore"
