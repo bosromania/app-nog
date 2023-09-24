@@ -8,7 +8,7 @@ if (is_numeric($player) == false || $player > 3) {
 
 $game = $_GET['game'] ?? 'a';
 
-if (in_array($game, ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']) == false) {
+if (false == in_array($game, ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'])) {
     header("Location: ?game=a");
     exit;
 }
@@ -33,8 +33,8 @@ set_error_handler(function ($e_code, $text, $file, $line) use ($player, $game) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>BOS la NOG 2022</title>
-    <meta name="description" itemprop="description" content="BOS la Noaptea ONG-urilor 2022. Participă la coding-ul echipei Web." />
+    <title>BOS la NOG <?= date('Y') ?></title>
+    <meta name="description" itemprop="description" content="BOS la Noaptea ONG-urilor <?= date('Y') ?>. Participă la coding-ul echipei Web." />
     <meta name="expires" content="never">
     <meta name="revisit-after" content="1 Days">
     <meta name="google" content="notranslate" />
@@ -44,16 +44,16 @@ set_error_handler(function ($e_code, $text, $file, $line) use ($player, $game) {
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://nog.bosromania.ro">
     <meta property="og:locale" content="ro_RO" />
-    <meta property="og:title" content="BOS la NOG 2022">
-    <meta property="og:description" content="BOS la Noaptea ONG-urilor 2022. Participă la coding-ul echipei Web.">
+    <meta property="og:title" content="BOS la NOG <?= date('Y') ?>">
+    <meta property="og:description" content="BOS la Noaptea ONG-urilor <?= date('Y') ?>. Participă la coding-ul echipei Web.">
     <meta property="og:image" itemprop="image" content="/assets/SEO-SM-image.jpg">
-    <meta property="og:image:alt" content="BOS la NOG 2022">
+    <meta property="og:image:alt" content="BOS la NOG <?= date('Y') ?>">
 
     <meta name="twitter:url" content="https://nog.bosromania.ro" />
-    <meta property="twitter:title" content="BOS la NOG 2022">
-    <meta property="twitter:description" content="BOS la Noaptea ONG-urilor 2022. Participă la coding-ul echipei Web.">
+    <meta property="twitter:title" content="BOS la NOG <?= date('Y') ?>">
+    <meta property="twitter:description" content="BOS la Noaptea ONG-urilor <?= date('Y') ?>. Participă la coding-ul echipei Web.">
     <meta name="twitter:image" content="/assets/SEO-SM-image.jpg" />
-    <meta property="twitter:image:alt" content="BOS la NOG 2022">
+    <meta property="twitter:image:alt" content="BOS la NOG <?= date('Y') ?>">
     <meta name="twitter:card" content="summary_large_image">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
