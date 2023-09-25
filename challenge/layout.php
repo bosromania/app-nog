@@ -97,9 +97,9 @@ set_error_handler(function ($e_code, $text, $file, $line) use ($player, $game) {
                 </div>
             </div>
             <div class="col-6 text-center pos-relative">
-                <img id="QR-code" class="w-50 py-3" src="/assets/QR-aplica.png" />
+                <img id="QR-code" class="w-50 py-3" src="/assets/QR-apply-to-BOS.jpeg" />
 
-                <img class="w-50 logo-taiat" src="/assets/1.3/logo-BOS-taiat.jpg" />
+                <img class="w-50 logo-taiat" src="/assets/for-c-and-e/logo-BOS-taiat.jpg" />
             </div>
         </div>
 
@@ -122,12 +122,12 @@ set_error_handler(function ($e_code, $text, $file, $line) use ($player, $game) {
                         <?php
                         foreach ($ingredients as $ingredient) { ?>
                             <div style="text-align: center; margin: 10px;">
-                                <img src="/assets/1.6/<?= $ingredient ?>.jpeg" class="w-50" />
+                                <img src="/assets/for-f/<?= $ingredient ?>.jpeg" class="w-50" />
                             </div>
                         <?php } ?>
                     </div>
                     <div class="col text-right">
-                        <img src="/assets/1.6/correct-recipe.jpeg" class="w-50" />
+                        <img src="/assets/for-f/correct-recipe.jpeg" class="w-50" />
                     </div>
                 </div>
                 <?php
@@ -206,7 +206,7 @@ set_error_handler(function ($e_code, $text, $file, $line) use ($player, $game) {
         $(document).ready(function () {
             $('body #app button').on('click', showQR);
 
-            if (game == 'b' || game == 'e' || game == 'h') {
+            if (game == 'b' || game == 'h') {
                 showQR();
             }
             if (game == 'c') {
@@ -221,6 +221,16 @@ set_error_handler(function ($e_code, $text, $file, $line) use ($player, $game) {
                 && text.search("Madagascar ") == -1 && text.search("Orientul Mijlociu") == -1) {
                     showQR();
                 }
+            }
+            if (game == 'e') {
+                var interval = setInterval(function () {
+                    if (overlayCheck(document.querySelectorAll('.logo-taiat, #QR-code')) == false) {
+                        console.log('error "e": check overlayCheck()'); //
+
+                        showQR();
+                        clearInterval(interval);
+                    }
+                }, 1500);
             }
             if (game == 'f') {
                 if (JSON.stringify(games.f.ingredients) == JSON.stringify(['chifla-sus','salata','ceapa','rosii','carne','chifla-jos'])) {
