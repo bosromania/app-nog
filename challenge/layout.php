@@ -97,7 +97,7 @@ set_error_handler(function ($e_code, $text, $file, $line) use ($player, $game) {
                 </div>
             </div>
             <div class="col-6 text-center pos-relative">
-                <img id="QR-code" class="w-50 py-3" src="/assets/QR-apply-to-BOS.jpeg" />
+                <img id="QR-code" class="w-50 py-3" src="/assets/QR-apply-to-BOS.png" />
 
                 <img class="w-50 logo-taiat" src="/assets/for-c-and-e/logo-BOS-taiat.jpg" />
             </div>
